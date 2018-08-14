@@ -1,4 +1,4 @@
-FROM openjdk:8-jre-alpine
+FROM aqzt/hi-alpine:openjdk8jre
 
 # Install required packages
 RUN apk add --no-cache \
