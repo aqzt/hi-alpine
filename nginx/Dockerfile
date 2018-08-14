@@ -1,4 +1,4 @@
-FROM aqzt/docker-alpine
+FROM aqzt/hi-alpine
 LABEL maintainer="aqzt.com (ppabc@qq.com)"
 
 ### Set Nginx Version Number
