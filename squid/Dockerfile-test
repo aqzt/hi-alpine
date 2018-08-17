@@ -95,7 +95,8 @@ RUN set -x && \
 RUN set -x && \
 	cd /tmp/build && \
 	make -j $(grep -cs ^processor /proc/cpuinfo) && \
-	make install
+	make install && \
+	rm -rf /tmp/build
 
 	
 ENV SQUID_CONFIG_FILE /etc/squid/squid.conf
