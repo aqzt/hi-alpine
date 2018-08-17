@@ -1,4 +1,5 @@
-FROM alpine:3.8
+FROM aqzt/hi-alpine
+LABEL maintainer="aqzt.com (ppabc@qq.com)"
 
 ENV SQUID_VER 3.5.28
 ENV SQUID_SIG_KEY EA31CC5E9488E5168D2DCC5EB268E706FF5CF463
