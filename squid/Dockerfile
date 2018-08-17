@@ -1,5 +1,4 @@
-FROM aqzt/hi-alpine
-LABEL maintainer="aqzt.com (ppabc@qq.com)"
+FROM alpine:3.8 as build
 
 ENV SQUID_VER 3.5.28
 ENV SQUID_SIG_KEY EA31CC5E9488E5168D2DCC5EB268E706FF5CF463
@@ -98,6 +97,7 @@ RUN set -x && \
 	make -j $(grep -cs ^processor /proc/cpuinfo) && \
 	make install
 
+FROM alpine:3.8
 	
 ENV SQUID_CONFIG_FILE /etc/squid/squid.conf
 ENV TZ Europe/Moscow
